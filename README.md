@@ -4,8 +4,8 @@ This is my personal portfolio website showcasing my skills, projects, and contac
 
 ## 🌐 Live Website
 
-👉 [View My Portfolio
-(file:///C:/Users/user/OneDrive/Desktop/web%20dev/PERSONAL-PORTFOLIO-WEBSITE/portfolio.html)
+[🌐 View My Portfolio](https://arpan-lab.github.io/personal-portfolio/)
+
 ## ✨ Features
 
 - Fully responsive design
