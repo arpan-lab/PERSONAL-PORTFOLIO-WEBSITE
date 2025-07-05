@@ -4,7 +4,7 @@ This is my personal portfolio website showcasing my skills, projects, and contac
 
 ## 🌐 Live Website
 
-[🌐 View My Portfolio](https://arpan-lab.github.io/personal-portfolio/)
+[🌐 View My Portfolio][(https://arpan-lab.github.io/personal-portfolio/)](https://github.com/arpan-lab/PERSONAL-PORTFOLIO-WEBSITE.git)
 
 ## ✨ Features
 
