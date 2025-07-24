@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,131 +14,95 @@ body {
 }
 
 section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
+  padding: 3rem 1rem;
 }
 
 /* Header */
 header {
   background: #111;
-  padding: 1rem 0;
+  padding: 1.2rem 0;
   text-align: center;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #00ffff;
+  text-shadow: 0 0 10px #00ffff80;
 }
 
+/* Navigation */
 nav ul {
-  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
+  list-style: none;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
   padding: 0.5rem 1rem;
-  border: 1px solid transparent;
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
+  background: rgba(0, 255, 255, 0.15);
   border: 1px solid #00ffff;
-  background: rgba(0, 255, 255, 0.1);
-  border-radius: 4px;
 }
 
 /* Container */
 .container {
   max-width: 1000px;
   margin: auto;
-  padding: 2rem;
 }
 
 /* Block */
 .block {
   background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  margin-top: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  margin-bottom: 2rem;
 }
 
 /* Resume Button */
 .resume-button {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   background: #00ffff;
   color: #000;
+  font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
   transition: background 0.3s ease;
 }
 
 .resume-button:hover {
-  background: #00bcbc;
+  background: #00cccc;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #111;
-  margin-top: 3rem;
-}
-
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  padding: 0.8rem;
-  margin: 0.5rem 0;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  padding: 0.8rem;
-  background: #00ffff;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #00bcbc;
-}
-
-/* Cube Navigation */
+/* Cube Nav */
 .cube-nav {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
   perspective: 1000px;
 }
 
 .cube {
-  position: relative;
   width: 150px;
   height: 150px;
+  position: relative;
   transform-style: preserve-3d;
-  animation: spin 20s infinite linear;
+  animation: spin 20s linear infinite;
 }
 
 .face {
@@ -145,12 +110,11 @@ form button:hover {
   width: 150px;
   height: 150px;
   background: #00ffff;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000;
   font-weight: bold;
-  font-size: 1rem;
   border: 2px solid #111;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
 }
@@ -160,16 +124,55 @@ form button:hover {
   text-decoration: none;
 }
 
-.front  { transform: rotateY(  0deg) translateZ(75px); }
+.front  { transform: rotateY(0deg) translateZ(75px); }
 .back   { transform: rotateY(180deg) translateZ(75px); }
-.right  { transform: rotateY( 90deg) translateZ(75px); }
+.right  { transform: rotateY(90deg) translateZ(75px); }
 .left   { transform: rotateY(-90deg) translateZ(75px); }
-.top    { transform: rotateX( 90deg) translateZ(75px); }
+.top    { transform: rotateX(90deg) translateZ(75px); }
 .bottom { transform: rotateX(-90deg) translateZ(75px); }
 
 @keyframes spin {
   0% { transform: rotateX(0deg) rotateY(0deg); }
   100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+form button {
+  background: #00ffff;
+  color: #000;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #00bcbc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #111;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 8px rgba(0, 255, 255, 0.1);
 }
 
 /* Responsive */
@@ -186,5 +189,9 @@ form button:hover {
   .face {
     width: 100px;
     height: 100px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
   }
 }

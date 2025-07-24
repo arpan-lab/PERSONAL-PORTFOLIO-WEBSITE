@@ -11,16 +11,15 @@ setInterval(() => {
   document.body.style.backgroundColor = getRandomColor();
 }, 5000);
 
-// Smooth scroll for nav links
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
+  // Smooth scroll for nav links
+  document.querySelectorAll('nav ul li a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const targetId = link.getAttribute('href')?.substring(1);
       const targetSection = document.getElementById(targetId);
       if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
@@ -35,19 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Add current year to footer
+  // Add current year in footer
   const footer = document.querySelector('footer p');
   if (footer) {
-    const yearSpan = document.createElement('span');
-    yearSpan.textContent = new Date().getFullYear();
-    footer.append(` ${yearSpan.textContent}`);
+    const year = new Date().getFullYear();
+    footer.innerHTML += ` <span>${year}</span>`;
   }
 
-  // Resume button alert
+  // Resume button click
   const resumeButton = document.querySelector('.resume-button');
   if (resumeButton) {
     resumeButton.addEventListener('click', () => {
-      alert('📄 You are about to view or download the resume.');
+      alert('📄 DownLoad Resume.');
     });
   }
 });
