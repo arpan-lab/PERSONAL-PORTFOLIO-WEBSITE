@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #0f2027, #14532d, #064e3b);
   color: #fff;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -20,19 +20,19 @@ section {
 
 /* Header */
 header {
-  background: #111;
+  background: #0a0f0a;
   padding: 1.2rem 0;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.2);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff80;
+  font-size: 2.3rem;
+  color: #4ade80;
+  text-shadow: 0 0 12px #22c55e80;
 }
 
 /* Navigation */
@@ -54,8 +54,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: rgba(0, 255, 255, 0.15);
-  border: 1px solid #00ffff;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid #22c55e;
 }
 
 /* Container */
@@ -69,7 +69,7 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
   margin-bottom: 2rem;
 }
 
@@ -77,16 +77,16 @@ nav ul li a:hover {
 .resume-button {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  background: #00ffff;
+  background: #22c55e;
   color: #000;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
 .resume-button:hover {
-  background: #00cccc;
+  background: #16a34a;
 }
 
 /* Cube Nav */
@@ -109,14 +109,14 @@ nav ul li a:hover {
   position: absolute;
   width: 150px;
   height: 150px;
-  background: #00ffff;
+  background: #22c55e;
   color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   border: 2px solid #111;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
 }
 
 .face a {
@@ -136,6 +136,60 @@ nav ul li a:hover {
   100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
+/* Projects */
+.projects-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-image img {
+  max-width: 280px;
+  border-radius: 15px;
+  border: 3px solid #22c55e;
+  box-shadow: 0 8px 30px rgba(34, 197, 94, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.project-cards {
+  flex: 1;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #064e3b, #065f46, #0f766e);
+  padding: 1.8rem;
+  border-radius: 18px;
+  color: #f0fdf4;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  box-shadow: 0 10px 25px rgba(6, 95, 70, 0.3);
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 14px 35px rgba(34, 197, 94, 0.45);
+}
+
+.project-card h3 a {
+  color: #bbf7d0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-card h3 a:hover {
+  color: #4ade80;
+  text-decoration: underline;
+}
+
 /* Contact Form */
 form {
   display: flex;
@@ -152,7 +206,7 @@ form textarea {
 }
 
 form button {
-  background: #00ffff;
+  background: #22c55e;
   color: #000;
   padding: 0.8rem;
   border: none;
@@ -162,17 +216,17 @@ form button {
 }
 
 form button:hover {
-  background: #00bcbc;
+  background: #16a34a;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  background: #111;
+  background: #0a0f0a;
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 3rem;
-  box-shadow: 0 -2px 8px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 -2px 8px rgba(34, 197, 94, 0.15);
 }
 
 /* Responsive */
@@ -193,5 +247,10 @@ footer {
 
   header h1 {
     font-size: 1.8rem;
+  }
+
+  .projects-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
