@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arpan Chakraborty's Portfolio</title>
-  <link rel="stylesheet" href="portfolio.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arpan Chakrabarty — Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- Canvas background for particles -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- header -->
+  <header class="site-header">
     <div class="container">
-      <h1>Arpan Chakraborty's Portfolio</h1>
-      <nav>
+      <h1 class="brand">Arpan Chakrabarty</h1>
+      <nav class="main-nav">
         <ul>
           <li><a href="#intro">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -24,140 +27,167 @@
       </nav>
     </div>
   </header>
-  <!-- 3D Cube Navigation -->
-    <div class="cube-nav">
-        <div class="cube">
-            <div class="face front"><a href="#intro">Home</a></div>
-            <div class="face back"><a href="#about">About</a></div>
-            <div class="face right"><a href="#skills">Skills</a></div>
-            <div class="face left"><a href="#projects">Projects</a></div>
-            <div class="face top"><a href="#resume">Resume</a></div>
-            <div class="face bottom"><a href="#contact">Contact</a></div>
-        </div>
+
+  <!-- rotating cube nav -->
+  <div class="cube-wrap" aria-hidden="true">
+    <div class="cube" id="nav-cube" tabindex="0">
+      <div class="face front"><a href="#intro">Home</a></div>
+      <div class="face right"><a href="#skills">Skills</a></div>
+      <div class="face back"><a href="#about">About</a></div>
+      <div class="face left"><a href="#projects">Projects</a></div>
+      <div class="face top"><a href="#resume">Resume</a></div>
+      <div class="face bottom"><a href="#contact">Contact</a></div>
     </div>
+  </div>
 
   <!-- Intro -->
-  <section id="intro">
-    <div class="container">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Hello! I'm Arpan Chakrabarty, a Full Stack Web Developer with a passion for creating user-friendly and visually appealing web applications. Explore my portfolio to learn more about my work, skills, and projects.</p>
-    </div>
-  </section>
+  <main>
+    <section id="intro" class="panel reveal">
+      <div class="container intro-grid">
+        <div class="intro-left">
+          <h2 class="intro-title">Welcome — I'm <span class="accent">Arpan</span></h2>
+          <p class="intro-sub">Full Stack Web Developer • B.Tech 2022–2026 • CGPA 9.0</p>
+          <div class="type-line" id="typed-line"></div>
+          <p class="lead">I build clean, user-friendly web apps with beautiful UI and solid backend logic. Explore my projects and get in touch.</p>
+          <div class="cta-group">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn outline" href="https://drive.google.com/file/d/1rK_5G0cRdT2LHx-oup2YwFyBPEJUAER8/view?usp=sharing" target="_blank">Resume</a>
+          </div>
+        </div>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="block">
-        <h2>About Me</h2>
-        <p align="center"><b>Hi! I’m Arpan Chakrabarty, Pursuing B.TECH in 2022-2026 from MCKV INSTITUTE OF ENGINEERING under MAKAUT. Presently in 6th semester, with a CGPA of 9.0 , I aim to create seamless and engaging digital experiences for users.</b></p>
-        <p>I'm always looking for opportunities to grow and improve my skills. Feel free to explore my projects and reach out to me for collaborations or job opportunities.</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/arpan-chakrabarty-576081252/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/arpan-lab" target="_blank">GitHub</a>
+        <div class="intro-right">
+          <div class="portrait">
+            <img src="assets/arpan.jpg" alt="Arpan Chakrabarty" />
+            <div class="portrait-glow"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="container">
-      <div class="block">
-        <h2>Skills</h2>
-        <h3><center>Web Development</center></h3>
-        <ul>
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>React.js, Node.js, Express.js, MongoDB</li>
-          <li>Bootstrap, TailwindCSS</li>
-        </ul>
-        <h3><center>Programming Languages</center></h3>
-        <ul>
-          <li>Python, C#, Java, C</li>
-        </ul>
-        <h3><center>Tools & Other Skills</center></h3>
-        <ul>
-          <li>Data Structures and Algorithms</li>
-          <li>Operating Systems, Computer Architecture</li>
-          <li>Power BI, MS Word, MS Excel</li>
-        </ul>
+    <!-- About -->
+    <section id="about" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+          <p><strong>Hi! I’m Arpan Chakrabarty</strong>, pursuing B.Tech (2022–2026) at MCKV Institute of Engineering (MAKAUT). Currently in 6th semester with CGPA 9.0. I enjoy building web applications and learning new tools and libraries.</p>
+          <p>I focus on full-stack development — React, Node.js/Express, MongoDB — and also enjoy algorithmic problem solving and data analysis.</p>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/arpan-chakrabarty-576081252/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/arpan-lab" target="_blank">GitHub</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Certificates -->
-  <section id="certificates">
-    <div class="container">
-      <h2>Certificates</h2>
-      <div class="block">
-        <h3>Data Analytics Job Simulation - Deloitte (Forage)</h3>
-        <h3>Getting Started with AI — IBM</h3>
-        <h3>Certified Web Developer (HTML, CSS, JS) — Udemy</h3>
-        <h3>The Joy of Computing Using Python — NPTEL</h3>
+    <!-- Skills -->
+    <section id="skills" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="tiles">
+          <div class="tile">
+            <h3>Web Development</h3>
+            <ul>
+              <li>HTML5 • CSS3 • JavaScript</li>
+              <li>React.js • Vite</li>
+              <li>Node.js • Express • MongoDB</li>
+              <li>Bootstrap • Tailwind</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python • C# • Java • C</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <h3>Tools</h3>
+            <ul>
+              <li>Git • VSCode • Postman</li>
+              <li>Power BI • Excel • Figma basics</li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-wrapper">
-        <div class="project-cards">
-          <div class="project-card">
+    <!-- Certificates -->
+    <section id="certificates" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">Certificates</h2>
+        <div class="card small-list">
+          <ul>
+            <li>Data Analytics Job Simulation - Deloitte (Forage)</li>
+            <li>Getting Started with AI — IBM</li>
+            <li>Certified Web Developer (HTML, CSS, JS) — Udemy</li>
+            <li>The Joy of Computing Using Python — NPTEL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project">
             <h3><a href="https://github.com/arpan-lab/Internet_Notebook.git" target="_blank">📒 Internet Notebook</a></h3>
-            <p>A browser-based digital notebook with add/edit/delete features and modular design.</p>
-          </div>
-          <div class="project-card">
+            <p>Browser-based digital notebook with add/edit/delete and modular design.</p>
+          </article>
+
+          <article class="project">
             <h3><a href="https://github.com/arpan-lab/News.git" target="_blank">📰 News App</a></h3>
-            <p>Real-time news app fetching headlines from public APIs. Includes category filters and async data fetching.</p>
-          </div>
-          <div class="project-card">
+            <p>Real-time news app using public APIs, with category filters and async fetching.</p>
+          </article>
+
+          <article class="project">
             <h3><a href="https://github.com/arpan-lab/grocery-shop.git" target="_blank">🛒 Grocery App</a></h3>
-            <p>A full-stack grocery app with MERN stack, authentication, dynamic cart, and responsive Bootstrap UI.</p>
-          </div>
-        </div>
-        <div class="project-image">
-          <img src="assets/arpan.jpg" alt="Arpan Chakrabarty">
+            <p>Full-stack MERN grocery app with authentication and responsive Bootstrap UI.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Resume -->
-  <section id="resume">
-    <div class="container">
-      <h2>Resume</h2>
-      <div class="block">
-        <p>You can view or download my resume by clicking the button below:</p>
-        <a href="https://drive.google.com/file/d/1rK_5G0cRdT2LHx-oup2YwFyBPEJUAER8/view?usp=sharing"
-           class="resume-button" target="_blank" rel="noopener noreferrer">📄 View My Resume</a>
+    <!-- Resume -->
+    <section id="resume" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <div class="card">
+          <p>Click the button to view or download my resume (Google Drive).</p>
+          <a class="btn" href="https://drive.google.com/file/d/1rK_5G0cRdT2LHx-oup2YwFyBPEJUAER8/view?usp=sharing" target="_blank">View Resume</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" action="#" method="POST">
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <p id="form-response"></p>
-      <h3>Contact Details</h3>
-      <p><strong>Phone:</strong> +91 6290294283</p>
-      <p><strong>Email:</strong> <a href="mailto:chakrabartyarpan8@gmail.com">chakrabartyarpan8@gmail.com</a></p>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="panel reveal">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form">
+            <input name="name" id="name" placeholder="Your name" required />
+            <input name="email" id="email" placeholder="Your email" type="email" required />
+            <textarea name="message" id="message" placeholder="Your message" rows="6" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+          <aside class="contact-card">
+            <h3>Contact Details</h3>
+            <p><strong>Phone:</strong> +91 6290294283</p>
+            <p><strong>Email:</strong> <a href="mailto:chakrabartyarpan8@gmail.com">chakrabartyarpan8@gmail.com</a></p>
+            <p>I'm open to internships, collaborative projects and freelance work.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 Arpan Chakrabarty. All rights reserved.</p>
+      <p>© <span id="year">2025</span> Arpan Chakrabarty — All rights reserved</p>
     </div>
   </footer>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
 
   <script src="portfolio.js"></script>
 </body>
